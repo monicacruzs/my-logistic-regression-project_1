@@ -37,6 +37,13 @@ This project demonstrates the implementation of logistic regression models using
 
 **Using the Digits dataset. Example of how to import the dataset using sklearn:**
 
+The digits dataset is a popular dataset used in machine learning and computer vision tasks. It is included as part of the sklearn.datasets module in scikit-learn, a popular machine learning library in Python. 
+This dataset contains images of handwritten digits (0 through 9) represented as 8x8 pixel images. Each image is represented as an array of 64 pixels, and the dataset also includes the corresponding labels indicating the true digit for each image.
+
+```python
+from sklearn.datasets import load_digits
+digits = load_digits()
+```
 
 ## Dataset
 - Description of the dataset
