@@ -19,12 +19,32 @@ This project demonstrates the implementation of logistic regression models using
    - How many data samples are there?
    - Are there any missing values? If so, how many?
    - Are all the data numeric, or are there columns with categorical data?
-   - Apply logistic regression to evaluate the classification model.
+     
+   ** Dataset structure **  
+   ![Dataset structure](images/HeadDframe.png)
 
-2. **Use boxplots and histograms to characterize the properties of each species:**
+   ** Summary Numeric Statistics **
+   ![Summary Numeric Statistics](images/statisticsdatasetnumeric.png)
+
+   ** Summary Object Statistics **
+   ![Summary Object Statistics](images/analisandospecies.png)
+
+   ** How many data samples ? **
+   ![Species Distributions](images/samples.png)
+   
+   ** Any missing values ? **
+   ![Any missing values ?](images/NullValues.png)
+
+   ** Categorical Data **
+   ![Species Distributions](images/distribuicaospecies.png)
+
+   ** Decoder Species for Algoritm **
+   ![Species Distributions](images/dfencoder.png)
+  
+
+3. **Use boxplots and histograms to characterize the properties of each species:**
    - Plot boxplots for Sepal Length, Sepal Width, Petal Length, and Petal Width.
    - Plot histograms for the same features.
-     ### Histogram of Petal Length
 
 ### Histogram of Petal Length
 This histogram visualizes the distribution of petal lengths across all samples in the Iris dataset. It shows that the majority of samples have petal lengths between 1.0 and 1.5 units, with some outliers towards higher values.
@@ -46,6 +66,11 @@ The pair plot provides a comprehensive view of the relationships between differe
    Based on the pair plot, the Petal Length and Petal Width seem to provide the best separation between the different species, followed by Sepal Length. Sepal Width appears to have less discriminatory power compared to the other features.
 
    Therefore, for feature selection in this case, we might choose to use only Petal Length and Petal Width as the input features for our logistic regression model.
+
+  ![Correlation Matrix](images/matrizcorrelacao.png)
+   
+  ![Most important Features](images/MostImportantFeatures.png)
+  
 
 5. **Apply logistic regression to evaluate the classification model.**
   ```python
@@ -69,9 +94,14 @@ The pair plot provides a comprehensive view of the relationships between differe
   ```
 
 7. **Calculate accuracy, precision, and recall of the model.**
+   ![Metrics](images/metrics.png)
 
-8. **Plot the confusion matrix using matplotlib or seaborn.**
+9. **Plot the confusion matrix using matplotlib or seaborn.**
+   ![Plot the confusion matrix](images/matrizconfusao.png)
 
+10. ** Interpret the coefficients of the logistic regression model to understand the impact of each feature on the classification decision.**
+    ![Coefficients of the logistic regression model](images/CoeficientDataframe.png)
+   
 ## Dataset 2: Digits
 
 **Using the Digits dataset. Example of how to import the dataset using sklearn:**
