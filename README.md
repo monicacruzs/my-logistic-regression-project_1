@@ -94,7 +94,7 @@ The pair plot provides a comprehensive view of the relationships between differe
   ```
 
 7. **Calculate accuracy, precision, and recall of the model.**
-   ![Metrics](images/metrics.png)
+   ![Metrics](images/Metrics.png)
 
 9. **Plot the confusion matrix using matplotlib or seaborn.**
    ![Plot the confusion matrix](images/matrizconfusao.png)
