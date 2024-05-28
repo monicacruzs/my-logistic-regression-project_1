@@ -48,10 +48,29 @@ The pair plot provides a comprehensive view of the relationships between differe
    Therefore, for feature selection in this case, we might choose to use only Petal Length and Petal Width as the input features for our logistic regression model.
 
 5. **Apply logistic regression to evaluate the classification model.**
+  ```python
 
-6. **Calculate accuracy, precision, and recall of the model.**
+   # Split the dataset into features and target variable
+   X = df.drop('Species', axis=1)
+   y = df['Species']
 
-7. **Plot the confusion matrix using matplotlib or seaborn.**
+   # Split the dataset into training and testing sets
+   X_train, X_test, y_train, y_test = train_test_split(X, y, test_size=0.2, random_state=42)# random_state contagem aleatoria do python
+
+   # Initialize and train the logistic regression model with increased max_iter
+   logreg = LogisticRegression(multi_class='multinomial', solver='lbfgs', max_iter=200)
+
+   # Fit do Modelo
+   logreg.fit(X_train, y_train)
+
+   # Make predictions using the trained logistic regression model
+   y_pred = logreg.predict(X_test) ### applying the model
+   y_pred_proba = logreg.predict_proba(X_test)[:, 1] ### probability predictions
+  ```
+
+7. **Calculate accuracy, precision, and recall of the model.**
+
+8. **Plot the confusion matrix using matplotlib or seaborn.**
 
 ## Dataset 2: Digits
 
